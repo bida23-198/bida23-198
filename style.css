@@ -1,0 +1,454 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    --color1: #FFF ;
+    --color2: #181818 ;
+    padding-top: 100px;
+}
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 0%;
+
+}
+header .menu a:hover{
+    color: #000;
+    background: #fff;
+  }
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-color: var(--color2);
+    padding: 12px 20px;
+    min-height: 14vh;
+}
+.logo img {width: 60px;}
+.menu {display: flex;}
+.menu li {padding-left: 30px;}
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color1);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+    padding-right: 15px;
+    border-radius: 5px;
+}
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color1);
+    transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {width: 100%;}
+.open-menu , .close-menu {
+    position: absolute;
+    color: var(--color1);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+header .active{
+    background:#656363;
+  }
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+#check {display: none;}
+@media(max-width: 610px){
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: var(--color2);
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top: 40px;}
+    .menu li a {padding: 10px;}
+    .open-menu , .close-menu {display: block;}
+    #check:checked ~ .menu {right: 0;}
+}
+
+
+
+.alignbox{
+	height: 100vh;
+	width: 100vw;
+	margin-top: 0%;
+	background-color: black;
+    background: url(images/blurry.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+.bodydesign{
+	width: 100vw;
+	max-height: 100vh;
+	position: absolute;
+	overflow: hidden;
+}
+
+.posterdiv{
+	float: left;
+	width: 30%;
+	margin-top: 50px;
+}
+
+.imgmovie{
+	padding: 10px 40px 10px 50px;
+}
+
+@media (max-width: 767px) {
+.imgmovie
+ {
+    margin-right: 0;
+	}}
+
+.imgmovie img{
+  width: 100%;
+  height: 100%;
+  object-position: bottom;
+  border-radius: 50px;
+  display: grid;
+  place-items: center;
+}
+
+.trailer a{
+	padding: 20px;
+	background-color: red;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	display: grid;
+	place-items: center;
+	font-weight: 600;
+	border-radius: 999px;
+}
+
+.filmtitle{
+	float: left;
+}
+.filmtitle p{
+    margin-top: 50vh;
+	padding: 20px;
+	color: white;
+	font-size: 80px;
+    margin-left: 5vh;
+    margin-right: 5vh;
+}
+.filmtitle i{
+	font-size: 20px;
+}
+
+.filmabout{
+	position: absolute;
+	margin-left: 70vh;
+	margin-top: 70vh;
+	margin-right: 5vh;
+}
+.filmabout p{
+	color: white;
+	font-size: 20px;
+	font-family: roboto;
+}
+
+/***footer***/
+footer{
+    background-color: #111;
+    width: 100%;
+    bottom: 0;
+}
+.footerContainer{
+    width: 100%;
+    padding: 50px 0px 0px ;
+    min-height: 14vh;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0,9;
+}
+/* Hover affect on social media icon */
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+.footerNav{
+    margin: 30px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color:white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+.footerBottom{
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    color: white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    } 
+    .footerNav ul li{
+        width:100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .socialIcons a{
+        padding: 8px;
+        margin: 4px;
+    }
+}
+
+/****movies****/
+.movie-list{
+	min-height: 85vh;
+	margin: auto;
+	width: 100%;
+	padding: 10px;
+	display: inline-block;
+	place-items:center;
+	margin-left: 0px;
+    background-color: #000;
+    margin-top: 5px;
+
+}
+.greyish {
+  background: smoke !important;
+}
+  
+h1 {
+    margin: rem-calc(100) 0 0;
+}
+
+.movie-img-container img {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(50%); /* Chrome 19+ & Safari 6+ */
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+  height: 325px;
+  object-fit: cover;
+}
+
+.movie-img-container {
+  display: inline-block;
+  position: relative;
+  
+  height: 325px;
+  width: 220px;
+  overflow: hidden;
+  margin: 0px 30px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+.spbutton {
+    display: none;
+    color: white;
+    background-color: black;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+	border-radius: 999px;
+}
+
+.movie-img-container:hover .spbutton {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+	color: gold;
+}
+
+.movie-img-container:hover img {
+    filter: none;
+    -webkit-filter: grayscale(0%);
+	padding: 5px;
+}
+
+h3{
+	color: white;
+	font-family: cursive;
+	font-size: 30px;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+/****feedback***/
+body{
+    background-color: #100101;
+}
+
+  
+input[type=text], [type=email], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical horizontal;
+  }
+  
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 0px;
+    display: grid;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .container {
+    float: unset;
+    max-width: 50vw;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px 10px;
+    margin-left: 30vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+
+  
+  }
+  /******thankyoupage******/
+  body{
+    background: #000000;
+    background: linear-gradient(to bottom, #000000 0%,#e1e8ed 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e1e8ed',GradientType=0 );
+        height: 100%;
+            margin: 0;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+      
+    }
+    
+    .wrapper-1{
+      width:100%;
+      height:60vh;
+      display: flex;
+    flex-direction: column;
+    }
+    .wrapper-2{
+      padding :30px;
+      text-align:center;
+    }
+    h1{
+        font-family: 'Kaushan Script', cursive;
+      font-size:4em;
+      letter-spacing:3px;
+      color:#5892FF ;
+      margin:0;
+      margin-bottom:20px;
+    }
+    .wrapper-2 p{
+      margin:0;
+      font-size:1.3em;
+      color:#aaa;
+      font-family: 'Source Sans Pro', sans-serif;
+      letter-spacing:1px;
+    }
+    .go-home{
+      color:#fff;
+      background:#5892FF;
+      border:none;
+      padding:10px 50px;
+      margin:30px 0;
+      border-radius:30px;
+      text-transform:capitalize;
+      box-shadow: 0 10px 16px 1px rgba(174, 199, 251, 1);
+    }
+    
+  
+  
+
+
+
